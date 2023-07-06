@@ -4,11 +4,14 @@ export type {
   BaseQueryApi,
   BaseQueryEnhancer,
   BaseQueryFn,
+  QueryReturnValue,
 } from './baseQueryTypes'
 export type {
   EndpointDefinitions,
   EndpointDefinition,
+  EndpointBuilder,
   QueryDefinition,
+  QueryArgFrom,
   MutationDefinition,
   TagDescription,
 } from './endpointDefinitions'
@@ -28,3 +31,4 @@ export { fakeBaseQuery } from './fakeBaseQuery'
 export { copyWithStructuralSharing } from './utils/copyWithStructuralSharing'
 export { createApi, coreModule, coreModuleName } from './core'
 export { defaultSerializeQueryArgs } from './defaultSerializeQueryArgs'
+export * from './tsHelpers';
