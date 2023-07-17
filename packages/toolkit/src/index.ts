@@ -64,10 +64,7 @@ export type {
   CaseReducer,
   CaseReducers,
 } from './createReducer'
-export {
-  // js
-  createSlice,
-} from './createSlice'
+export * from './createSlice'
 
 export type {
   // types
