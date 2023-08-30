@@ -1,0 +1,10 @@
+{
+  "name": "@reduxjs/toolkit-internal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "../dist/internal/index.js",
+  "types": "./../dist/internal/index.d.ts",
+  "author": "Mark Erikson <mark@isquaredsoftware.com>",
+  "license": "MIT",
+  "sideEffects": false
+}

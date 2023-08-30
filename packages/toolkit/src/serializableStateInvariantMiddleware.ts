@@ -1,6 +1,6 @@
 import isPlainObject from './isPlainObject'
-import type { Middleware } from 'redux'
-import { getTimeMeasureUtils } from './utils'
+import type { Middleware } from '@reduxjs/toolkit/redux'
+import { getTimeMeasureUtils } from '@reduxjs/toolkit/internal'
 import { isAction } from './createAction'
 
 /**

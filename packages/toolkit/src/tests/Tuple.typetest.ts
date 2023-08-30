@@ -1,4 +1,4 @@
-import { Tuple } from '@reduxjs/toolkit'
+import { Tuple } from '@reduxjs/toolkit/internal'
 import { expectType } from './helpers'
 
 /**

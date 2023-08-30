@@ -5,8 +5,8 @@ import type {
   Middleware,
   Action as ReduxAction,
   UnknownAction,
-} from 'redux'
-import type { ThunkDispatch } from 'redux-thunk'
+} from '@reduxjs/toolkit/redux'
+import type { ThunkDispatch } from '@reduxjs/toolkit/redux-thunk'
 import type { TaskAbortError } from './exceptions'
 
 /**

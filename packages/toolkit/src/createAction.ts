@@ -1,11 +1,11 @@
-import type { Action, UnknownAction } from 'redux'
+import type { Action, UnknownAction } from '@reduxjs/toolkit/redux'
 import type {
   IsUnknownOrNonInferrable,
   IfMaybeUndefined,
   IfVoid,
   IsAny,
-} from './tsHelpers'
-import { hasMatchFunction } from './tsHelpers'
+} from '@reduxjs/toolkit/internal'
+import { hasMatchFunction } from '@reduxjs/toolkit/internal'
 import isPlainObject from './isPlainObject'
 
 /**
@@ -309,7 +309,7 @@ export function isActionCreator(
 /**
  * Returns true if value is an action with a string type and valid Flux Standard Action keys.
  */
-export function isFSA(action: unknown): action is {
+export function isFluxStandardAction(action: unknown): action is {
   type: string
   payload?: unknown
   error?: unknown

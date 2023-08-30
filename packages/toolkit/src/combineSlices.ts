@@ -1,13 +1,13 @@
-import type { UnknownAction, Reducer, StateFromReducersMapObject } from 'redux'
-import { combineReducers } from 'redux'
-import { nanoid } from './nanoid'
+import type { UnknownAction, Reducer, StateFromReducersMapObject } from '@reduxjs/toolkit/redux'
+import { combineReducers } from '@reduxjs/toolkit/redux'
+import { nanoid } from '@reduxjs/toolkit/nanoid'
 import type {
   Id,
   NonUndefined,
   Tail,
   UnionToIntersection,
   WithOptionalProp,
-} from './tsHelpers'
+} from '@reduxjs/toolkit/internal'
 
 type SliceLike<ReducerPath extends string, State> = {
   reducerPath: ReducerPath

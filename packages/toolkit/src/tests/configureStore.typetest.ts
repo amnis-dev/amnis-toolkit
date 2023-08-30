@@ -7,12 +7,12 @@ import type {
   Store,
   Action,
   StoreEnhancer,
-} from 'redux'
-import { applyMiddleware, combineReducers } from 'redux'
+} from '@reduxjs/toolkit/redux'
+import { applyMiddleware, combineReducers } from '@reduxjs/toolkit/redux'
 import type { PayloadAction, ConfigureStoreOptions } from '@reduxjs/toolkit'
 import { configureStore, createSlice, Tuple } from '@reduxjs/toolkit'
-import type { ThunkMiddleware, ThunkAction, ThunkDispatch } from 'redux-thunk'
-import { thunk } from 'redux-thunk'
+import type { ThunkMiddleware, ThunkAction, ThunkDispatch } from '@reduxjs/toolkit/redux-thunk'
+import { thunk } from '@reduxjs/toolkit/redux-thunk'
 import { expectNotAny, expectType } from './helpers'
 
 const _anyMiddleware: any = () => () => () => {}

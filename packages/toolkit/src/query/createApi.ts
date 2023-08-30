@@ -11,7 +11,7 @@ import { DefinitionType, isQueryDefinition } from './endpointDefinitions'
 import { nanoid } from '@reduxjs/toolkit'
 import type { UnknownAction } from '@reduxjs/toolkit'
 import type { NoInfer } from './tsHelpers'
-import { defaultMemoize } from 'reselect'
+import { defaultMemoize } from '@reduxjs/toolkit/reselect'
 
 export interface CreateApiOptions<
   BaseQuery extends BaseQueryFn,

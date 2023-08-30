@@ -10,8 +10,8 @@ import {
   createSerializableStateInvariantMiddleware,
   findNonSerializableValue,
   isPlain,
-  Tuple,
 } from '@reduxjs/toolkit'
+import { Tuple } from '@reduxjs/toolkit/internal'
 import { isNestedFrozen } from '@internal/serializableStateInvariantMiddleware'
 
 // Mocking console

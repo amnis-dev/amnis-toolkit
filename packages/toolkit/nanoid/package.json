@@ -1,0 +1,10 @@
+{
+  "name": "@reduxjs/toolkit-nanoid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "../dist/nanoid/index.js",
+  "types": "./../dist/nanoid/index.d.ts",
+  "author": "Mark Erikson <mark@isquaredsoftware.com>",
+  "license": "MIT",
+  "sideEffects": false
+}

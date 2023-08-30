@@ -11,11 +11,11 @@ import {
   createSlice,
   configureStore,
 } from '@reduxjs/toolkit'
-import type { ThunkDispatch } from 'redux-thunk'
+import type { ThunkDispatch } from '@reduxjs/toolkit/redux-thunk'
 
 import type { AxiosError } from 'axios'
 import apiRequest from 'axios'
-import type { IsAny, IsUnknown } from '@internal/tsHelpers'
+import type { IsAny, IsUnknown } from '@reduxjs/toolkit/dist/tsHelpers-backup'
 import { expectExactType, expectType } from './helpers'
 import type {
   AsyncThunkFulfilledActionCreator,

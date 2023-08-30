@@ -1,6 +1,6 @@
 /* eslint-disable no-lone-blocks */
-import type { Action, UnknownAction, Middleware } from 'redux'
-import type { ThunkDispatch } from 'redux-thunk'
+import type { Action, UnknownAction, Middleware } from '@reduxjs/toolkit/redux'
+import type { ThunkDispatch } from '@reduxjs/toolkit/redux-thunk'
 import { createDynamicMiddleware } from '../index'
 import { configureStore } from '../../configureStore'
 import { expectExactType, expectType } from '../../tests/helpers'

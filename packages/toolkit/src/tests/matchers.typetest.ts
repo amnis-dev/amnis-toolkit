@@ -1,5 +1,5 @@
 import { expectExactType, expectUnknown } from './helpers'
-import type { UnknownAction } from 'redux'
+import type { UnknownAction } from '@reduxjs/toolkit/redux'
 import type { SerializedError } from '../../src'
 import {
   createAction,

@@ -3,7 +3,7 @@ import {
   createAction,
   createSlice,
   isAnyOf,
-  isFSA,
+  isFluxStandardAction,
 } from '@reduxjs/toolkit'
 import type { Mock } from 'vitest'
 import { vi } from 'vitest'
@@ -1448,7 +1448,7 @@ describe('createListenerMiddleware', () => {
           currentState,
           previousState
         ): action is PayloadAction<number> => {
-          return isFSA(action) && typeof action.payload === 'boolean'
+          return isFluxStandardAction(action) && typeof action.payload === 'boolean'
         },
         effect: (action, listenerApi) => {
           expectExactType<PayloadAction<number>>(action)
@@ -1457,7 +1457,7 @@ describe('createListenerMiddleware', () => {
 
       startListening({
         predicate: (action, currentState) => {
-          return isFSA(action) && typeof action.payload === 'number'
+          return isFluxStandardAction(action) && typeof action.payload === 'number'
         },
         effect: (action, listenerApi) => {
           expectExactType<UnknownAction>(action)

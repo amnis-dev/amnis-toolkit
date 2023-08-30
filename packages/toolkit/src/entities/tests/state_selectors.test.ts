@@ -4,8 +4,8 @@ import { createEntityAdapter } from '../index'
 import type { EntitySelectors } from '../models'
 import type { BookModel } from './fixtures/book'
 import { AClockworkOrange, AnimalFarm, TheGreatGatsby } from './fixtures/book'
-import type { Selector } from 'reselect'
-import { createSelector, weakMapMemoize } from 'reselect'
+import type { Selector } from '@reduxjs/toolkit/reselect'
+import { createSelector, weakMapMemoize } from '@reduxjs/toolkit/reselect'
 import { vi } from 'vitest'
 
 describe('Entity State Selectors', () => {

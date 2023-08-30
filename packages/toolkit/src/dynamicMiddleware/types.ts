@@ -3,8 +3,8 @@ import type {
   Dispatch as ReduxDispatch,
   UnknownAction,
   MiddlewareAPI,
-} from 'redux'
-import type { ExtractDispatchExtensions, FallbackIfUnknown } from '../tsHelpers'
+} from '@reduxjs/toolkit/redux'
+import type { ExtractDispatchExtensions, FallbackIfUnknown } from '@reduxjs/toolkit/internal'
 import type { PayloadAction, BaseActionCreator } from '../createAction'
 
 export type GetMiddlewareApi<MiddlewareApiConfig> = MiddlewareAPI<

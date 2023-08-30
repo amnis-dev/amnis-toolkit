@@ -18,7 +18,7 @@ import type { Api, ApiContext } from '../apiTypes'
 import type { ApiEndpointQuery } from './module'
 import type { BaseQueryError, QueryReturnValue } from '../baseQueryTypes'
 import type { QueryResultSelectorResult } from './buildSelectors'
-import type { Dispatch } from 'redux'
+import type { Dispatch } from '@reduxjs/toolkit/redux'
 import { isNotNullish } from '../utils/isNotNullish'
 
 declare module './module' {

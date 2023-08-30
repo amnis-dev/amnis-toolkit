@@ -35,8 +35,8 @@ import {
   isRejected,
   isRejectedWithValue,
 } from '@reduxjs/toolkit'
-import type { Patch } from 'immer'
-import { isDraftable, produceWithPatches } from 'immer'
+import type { Patch } from '@reduxjs/toolkit/immer'
+import { isDraftable, produceWithPatches } from '@reduxjs/toolkit/immer'
 import type { ThunkAction, ThunkDispatch, AsyncThunk } from '@reduxjs/toolkit'
 import { createAsyncThunk, SHOULD_AUTOBATCH } from '@reduxjs/toolkit'
 

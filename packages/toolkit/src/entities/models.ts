@@ -1,7 +1,6 @@
-import type { UncheckedIndexedAccess } from '../uncheckedindexed'
 import type { PayloadAction } from '../createAction'
 import type { GetSelectorsOptions } from './state_selectors'
-import type { CastAny, Id as Compute } from '../tsHelpers'
+import type { CastAny, Id as Compute, UncheckedIndexedAccess } from '@reduxjs/toolkit/internal'
 
 /**
  * @public

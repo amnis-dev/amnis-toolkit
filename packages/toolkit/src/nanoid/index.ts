@@ -5,7 +5,6 @@ let urlAlphabet =
   'ModuleSymbhasOwnPr-0123456789ABCDEFGHNRVfgctiUvz_KqYTJkLxpZXIjQW'
 
 /**
- *
  * @public
  */
 export let nanoid = (size = 21) => {

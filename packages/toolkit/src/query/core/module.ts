@@ -48,7 +48,7 @@ import type { BaseQueryFn } from '../baseQueryTypes'
 import type { ReferenceCacheLifecycle } from './buildMiddleware/cacheLifecycle'
 import type { ReferenceQueryLifecycle } from './buildMiddleware/queryLifecycle'
 import type { ReferenceCacheCollection } from './buildMiddleware/cacheCollection'
-import { enablePatches } from 'immer'
+import { enablePatches } from '@reduxjs/toolkit/immer'
 
 /**
  * `ifOlderThan` - (default: `false` | `number`) - _number is value in seconds_

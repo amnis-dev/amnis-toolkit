@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Action, UnknownAction, ActionCreator } from 'redux'
+import type { Action, UnknownAction, ActionCreator } from '@reduxjs/toolkit/redux'
 import type {
   PayloadAction,
   PayloadActionCreator,
@@ -10,7 +10,7 @@ import type {
   ActionCreatorWithPreparedPayload,
 } from '@reduxjs/toolkit'
 import { createAction } from '@reduxjs/toolkit'
-import type { IsAny } from '@internal/tsHelpers'
+import type { IsAny } from '@reduxjs/toolkit/dist/tsHelpers-backup'
 import { expectType } from './helpers'
 
 /* PayloadAction */

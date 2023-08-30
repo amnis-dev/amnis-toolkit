@@ -1,4 +1,4 @@
-import type { CreateSelectorFunction, Selector } from 'reselect'
+import type { CreateSelectorFunction, Selector } from '@reduxjs/toolkit/reselect'
 import { createDraftSafeSelector } from '../createDraftSafeSelector'
 import type { EntityState, EntitySelectors, EntityId } from './models'
 

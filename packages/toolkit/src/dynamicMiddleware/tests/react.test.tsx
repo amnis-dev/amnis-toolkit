@@ -3,7 +3,7 @@ import { createDynamicMiddleware } from '../react'
 import { configureStore } from '../../configureStore'
 import { makeProbeableMiddleware, probeMiddleware } from './index.test'
 import { render } from '@testing-library/react'
-import type { Dispatch } from 'redux'
+import type { Dispatch } from '@reduxjs/toolkit/redux'
 import type { ReactReduxContextValue } from 'react-redux'
 import { Provider } from 'react-redux'
 

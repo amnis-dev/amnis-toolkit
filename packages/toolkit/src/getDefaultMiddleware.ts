@@ -1,6 +1,6 @@
-import type { Middleware, UnknownAction } from 'redux'
-import type { ThunkMiddleware } from 'redux-thunk'
-import { thunk as thunkMiddleware, withExtraArgument } from 'redux-thunk'
+import type { Middleware, UnknownAction } from '@reduxjs/toolkit/redux'
+import type { ThunkMiddleware } from '@reduxjs/toolkit/redux-thunk'
+import { thunk as thunkMiddleware, withExtraArgument } from '@reduxjs/toolkit/redux-thunk'
 import type { ActionCreatorInvariantMiddlewareOptions } from './actionCreatorInvariantMiddleware'
 import { createActionCreatorInvariantMiddleware } from './actionCreatorInvariantMiddleware'
 import type { ImmutableStateInvariantMiddlewareOptions } from './immutableStateInvariantMiddleware'
@@ -10,8 +10,8 @@ import { createImmutableStateInvariantMiddleware } from './immutableStateInvaria
 
 import type { SerializableStateInvariantMiddlewareOptions } from './serializableStateInvariantMiddleware'
 import { createSerializableStateInvariantMiddleware } from './serializableStateInvariantMiddleware'
-import type { ExcludeFromTuple } from './tsHelpers'
-import { Tuple } from './utils'
+import type { ExcludeFromTuple } from '@reduxjs/toolkit/internal'
+import { Tuple } from '@reduxjs/toolkit/internal'
 
 function isBoolean(x: any): x is boolean {
   return typeof x === 'boolean'

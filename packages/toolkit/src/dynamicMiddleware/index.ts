@@ -3,11 +3,11 @@ import type {
   Dispatch as ReduxDispatch,
   UnknownAction,
   MiddlewareAPI,
-} from 'redux'
-import { compose } from 'redux'
+} from '@reduxjs/toolkit/redux'
+import { compose } from '@reduxjs/toolkit/redux'
 import { createAction, isAction } from '../createAction'
-import { nanoid } from '../nanoid'
-import { find } from '../utils'
+import { nanoid } from '@reduxjs/toolkit/nanoid';
+import { find } from '@reduxjs/toolkit/internal';
 import type {
   WithMiddleware,
   AddMiddleware,

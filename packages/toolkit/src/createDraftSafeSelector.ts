@@ -1,5 +1,5 @@
-import { current, isDraft } from 'immer'
-import { createSelectorCreator, defaultMemoize } from 'reselect'
+import { current, isDraft } from '@reduxjs/toolkit/immer'
+import { createSelectorCreator, defaultMemoize } from '@reduxjs/toolkit/reselect'
 
 export const createDraftSafeSelectorCreator: typeof createSelectorCreator = (
   ...args: unknown[]

@@ -3,7 +3,7 @@ import * as React from 'react'
 import { createApi, setupListeners } from '@reduxjs/toolkit/query/react'
 import { act, fireEvent, render, waitFor, screen } from '@testing-library/react'
 import { setupApiStore, waitMs } from './helpers'
-import { delay } from '../../utils'
+import { delay } from '@reduxjs/toolkit/internal'
 
 // Just setup a temporary in-memory counter for tests that `getIncrementedAmount`.
 // This can be used to test how many renders happen due to data changes or
