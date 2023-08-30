@@ -1,12 +1,12 @@
-import type { Dispatch, UnknownAction } from 'redux'
+import type { Dispatch, UnknownAction } from '@reduxjs/toolkit/redux'
 import type {
   PayloadAction,
   ActionCreatorWithPreparedPayload,
 } from './createAction'
 import { createAction } from './createAction'
-import type { ThunkDispatch } from 'redux-thunk'
-import type { FallbackIfUnknown, Id, IsAny, IsUnknown } from './tsHelpers'
-import { nanoid } from './nanoid'
+import type { ThunkDispatch } from '@reduxjs/toolkit/redux-thunk'
+import type { FallbackIfUnknown, Id, IsAny, IsUnknown } from '@reduxjs/toolkit/internal'
+import { nanoid } from '@reduxjs/toolkit/nanoid'
 
 // @ts-ignore we need the import of these types due to a bundling issue.
 type _Keep = PayloadAction | ActionCreatorWithPreparedPayload<any, unknown>

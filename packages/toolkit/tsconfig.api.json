@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "paths": {
+      "@reduxjs/toolkit": ["dist/index.d.ts"],
+      "@reduxjs/toolkit/nanoid": ["dist/nanoid/index.d.ts"],
+      "@reduxjs/toolkit/react": ["dist/react/index.d.ts"],
+      "@reduxjs/toolkit/query": ["dist/query/index.d.ts"],
+      "@reduxjs/toolkit/query/react": ["dist/query/react/index.d.ts"],
+      "@reduxjs/toolkit/internal": ["dist/internal/index.d.ts"],
+      // Re-exported libraries.
+      "@reduxjs/toolkit/immer": ["dist/immer/index.d.ts"],
+      "@reduxjs/toolkit/redux": ["dist/redux/index.d.ts"],
+      "@reduxjs/toolkit/redux-thunk": ["dist/redux-thunk/index.d.ts"],
+      "@reduxjs/toolkit/reselect": ["dist/reselect/index.d.ts"],
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "src/**/*.test.ts*",
+    "src/**/tests/*"
+  ],
+}

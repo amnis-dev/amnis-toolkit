@@ -1,4 +1,4 @@
-import type { Action, UnknownAction, Reducer } from 'redux'
+import type { Action, UnknownAction, Reducer } from '@reduxjs/toolkit/redux'
 import type {
   ActionCreatorWithoutPayload,
   PayloadAction,
@@ -11,7 +11,7 @@ import type { CaseReducer, ReducerWithInitialState } from './createReducer'
 import { createReducer } from './createReducer'
 import type { ActionReducerMapBuilder } from './mapBuilders'
 import { executeReducerBuilderCallback } from './mapBuilders'
-import type { Id, Tail } from './tsHelpers'
+import type { Id, Tail } from '@reduxjs/toolkit/internal'
 import type { InjectConfig } from './combineSlices'
 import type {
   AsyncThunk,

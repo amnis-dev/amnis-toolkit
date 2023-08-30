@@ -1,11 +1,9 @@
-//@ts-ignore
+/* eslint-disable no-undef */
 import nodeFetch from 'node-fetch'
-//@ts-ignore
+import { server } from './src/query/tests/mocks/server'
 globalThis.fetch = nodeFetch
-//@ts-ignore
 globalThis.Request = nodeFetch.Request
 globalThis.Headers = nodeFetch.Headers
-import { server } from './src/query/tests/mocks/server'
 
 beforeAll(() => server.listen({ onUnhandledRequest: 'error' }))
 afterEach(() => server.resetHandlers())

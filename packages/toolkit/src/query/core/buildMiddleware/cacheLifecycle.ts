@@ -1,6 +1,6 @@
 import { isAsyncThunkAction, isFulfilled } from '@reduxjs/toolkit'
-import type { UnknownAction } from 'redux'
-import type { ThunkDispatch } from 'redux-thunk'
+import type { UnknownAction } from '@reduxjs/toolkit/redux'
+import type { ThunkDispatch } from '@reduxjs/toolkit/redux-thunk'
 import type { BaseQueryFn, BaseQueryMeta } from '../../baseQueryTypes'
 import { DefinitionType } from '../../endpointDefinitions'
 import type { RootState } from '../apiState'

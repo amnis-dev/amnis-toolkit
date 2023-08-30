@@ -14,7 +14,7 @@ import {
   getLog,
 } from 'console-testing-library/pure'
 import { expectType } from './helpers'
-import { delay } from '../utils'
+import { delay } from '@reduxjs/toolkit/internal'
 
 declare global {
   interface Window {

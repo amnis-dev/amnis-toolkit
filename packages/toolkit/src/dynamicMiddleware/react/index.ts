@@ -3,8 +3,8 @@ import type {
   UnknownAction,
   Dispatch as ReduxDispatch,
   Middleware,
-} from 'redux'
-import type { TSHelpersExtractDispatchExtensions } from '@reduxjs/toolkit'
+} from '@reduxjs/toolkit/redux'
+import type { ExtractDispatchExtensions as TSHelpersExtractDispatchExtensions } from '@reduxjs/toolkit/internal'
 import { createDynamicMiddleware as cDM } from '@reduxjs/toolkit'
 import type { ReactReduxContextValue } from 'react-redux'
 import {

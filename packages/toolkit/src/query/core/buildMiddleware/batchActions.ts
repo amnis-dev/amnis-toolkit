@@ -1,6 +1,6 @@
 import type { InternalHandlerBuilder } from './types'
 import type { SubscriptionState } from '../apiState'
-import { produceWithPatches } from 'immer'
+import { produceWithPatches } from '@reduxjs/toolkit/immer';
 import type { Action } from '@reduxjs/toolkit'
 
 export const buildBatchedActionsHandler: InternalHandlerBuilder<

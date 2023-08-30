@@ -1,4 +1,4 @@
-import type { Action, UnknownAction, Reducer } from 'redux'
+import type { Action, UnknownAction, Reducer } from '@reduxjs/toolkit/redux'
 import type {
   ActionCreatorWithNonInferrablePayload,
   ActionCreatorWithOptionalPayload,

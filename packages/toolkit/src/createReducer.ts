@@ -1,10 +1,10 @@
-import type { Draft } from 'immer'
-import { produce as createNextState, isDraft, isDraftable } from 'immer'
-import type { Action, Reducer, UnknownAction } from 'redux'
+import type { Draft } from '@reduxjs/toolkit/immer'
+import { createNextState, isDraft, isDraftable } from '@reduxjs/toolkit/immer'
+import type { Action, Reducer, UnknownAction } from '@reduxjs/toolkit/redux'
 import type { ActionReducerMapBuilder } from './mapBuilders'
 import { executeReducerBuilderCallback } from './mapBuilders'
-import type { NoInfer, TypeGuard } from './tsHelpers'
-import { freezeDraftable } from './utils'
+import type { NoInfer, TypeGuard } from '@reduxjs/toolkit/internal'
+import { freezeDraftable } from '@reduxjs/toolkit/internal';
 
 /**
  * Defines a mapping from action types to corresponding action object shapes.

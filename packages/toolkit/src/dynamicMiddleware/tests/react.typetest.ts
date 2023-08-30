@@ -1,8 +1,8 @@
 /* eslint-disable no-lone-blocks */
 import type { Context } from 'react'
 import type { ReactReduxContextValue } from 'react-redux'
-import type { Action, UnknownAction, Middleware } from 'redux'
-import type { ThunkDispatch } from 'redux-thunk'
+import type { Action, UnknownAction, Middleware } from '@reduxjs/toolkit/redux'
+import type { ThunkDispatch } from '@reduxjs/toolkit/redux-thunk'
 import { createDynamicMiddleware } from '../react'
 import { expectExactType, expectType } from '../../tests/helpers'
 /* eslint-disable no-lone-blocks */

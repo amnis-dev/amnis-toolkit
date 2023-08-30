@@ -8,13 +8,13 @@ import type {
   Dispatch,
 } from '@reduxjs/toolkit'
 import { configureStore } from '@reduxjs/toolkit'
-import { thunk } from 'redux-thunk'
-import type { ThunkMiddleware } from 'redux-thunk'
+import { thunk } from '@reduxjs/toolkit/redux-thunk'
+import type { ThunkMiddleware } from '@reduxjs/toolkit/redux-thunk'
 
 import { expectType } from './helpers'
 
 import { buildGetDefaultMiddleware } from '@internal/getDefaultMiddleware'
-import { Tuple } from '@internal/utils'
+import { Tuple } from '@reduxjs/toolkit/internal'
 
 const getDefaultMiddleware = buildGetDefaultMiddleware()
 

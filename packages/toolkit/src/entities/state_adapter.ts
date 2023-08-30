@@ -1,8 +1,7 @@
-import { produce as createNextState, isDraft } from 'immer'
+import { createNextState, isDraft } from '@reduxjs/toolkit/immer'
 import type { EntityId, EntityState, PreventAny } from './models'
 import type { PayloadAction } from '../createAction'
-import { isFSA } from '../createAction'
-import { IsAny } from '../tsHelpers'
+import { isFluxStandardAction } from '../createAction'
 
 export function createSingleArgumentStateOperator<T, Id extends EntityId>(
   mutator: (state: EntityState<T, Id>) => void
@@ -28,7 +27,7 @@ export function createStateOperator<T, Id extends EntityId, R>(
     function isPayloadActionArgument(
       arg: R | PayloadAction<R>
     ): arg is PayloadAction<R> {
-      return isFSA(arg)
+      return isFluxStandardAction(arg)
     }
 
     const runMutator = (draft: EntityState<T, Id>) => {

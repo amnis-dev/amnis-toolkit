@@ -55,6 +55,9 @@ jobs:
       - name: Pack
         run: yarn pack
 
+      - name: API Extract
+        run: yarn api
+
       - uses: actions/upload-artifact@v2
         with:
           name: package

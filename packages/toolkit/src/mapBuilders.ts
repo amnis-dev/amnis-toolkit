@@ -1,10 +1,10 @@
-import type { Action } from 'redux'
+import type { Action } from '@reduxjs/toolkit/redux'
 import type {
   CaseReducer,
   CaseReducers,
   ActionMatcherDescriptionCollection,
 } from './createReducer'
-import type { TypeGuard } from './tsHelpers'
+import type { TypeGuard } from '@reduxjs/toolkit/internal'
 
 export interface TypedActionCreator<Type extends string> {
   (...args: any[]): Action<Type>

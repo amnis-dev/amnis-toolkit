@@ -22,34 +22,59 @@
   "publishConfig": {
     "access": "public"
   },
-  "module": "dist/redux-toolkit.legacy-esm.js",
-  "main": "dist/cjs/index.js",
+  "module": "dist/reduxToolkit.mjs",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/redux-toolkit.modern.mjs",
-      "default": "./dist/cjs/index.js"
+      "import": "./dist/reduxToolkit.mjs",
+      "default": "./dist/reduxToolkit.js"
+    },
+    "./nanoid": {
+      "types": "./dist/nanoid/index.d.ts",
+      "import": "./dist/reduxToolkitNanoid.mjs",
+      "default": "./dist/reduxToolkitNanoid.js"
     },
     "./react": {
       "types": "./dist/react/index.d.ts",
-      "import": "./dist/react/redux-toolkit-react.modern.mjs",
-      "default": "./dist/react/cjs/index.js"
+      "import": "./dist/reduxToolkitReact.mjs",
+      "default": "./dist/reduxToolkitReact.js"
     },
     "./query": {
       "types": "./dist/query/index.d.ts",
-      "import": "./dist/query/rtk-query.modern.mjs",
-      "default": "./dist/query/cjs/index.js"
+      "import": "./dist/reduxToolkitQuery.mjs",
+      "default": "./dist/reduxToolkitQuery.js"
     },
     "./query/react": {
       "types": "./dist/query/react/index.d.ts",
-      "import": "./dist/query/react/rtk-query-react.modern.mjs",
-      "default": "./dist/query/react/cjs/index.js"
+      "import": "./dist/reduxToolkitQueryReact.mjs",
+      "default": "./dist/reduxToolkitQueryReact.js"
+    },
+    "./immer": {
+      "types": "./dist/immer/index.d.ts",
+      "import": "./dist/immer.mjs",
+      "default": "./dist/immer.js"
+    },
+    "./redux": {
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux.mjs",
+      "default": "./dist/redux.js"
+    },
+    "./redux-thunk": {
+      "types": "./dist/redux-thunk/index.d.ts",
+      "import": "./dist/reduxThunk.mjs",
+      "default": "./dist/reduxThunk.js"
+    },
+    "./reselect": {
+      "types": "./dist/reselect/index.d.ts",
+      "import": "./dist/reselect.mjs",
+      "default": "./dist/reselect.js"
     }
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.13.2",
+    "@microsoft/api-extractor": "^7.36.4",
     "@size-limit/preset-small-lib": "^4.11.0",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.1.5",
@@ -86,28 +111,33 @@
     "rimraf": "^3.0.2",
     "size-limit": "^4.11.0",
     "tslib": "^1.10.0",
-    "tsup": "^7.2.0",
     "tsx": "^3.12.2",
     "typescript": "~4.9",
-    "vitest": "^0.30.1",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.3",
     "yargs": "^15.3.1"
   },
   "scripts": {
-    "run-build": "tsup",
-    "build": "yarn rimraf dist && echo Compiling TS... &&  yarn tsc && yarn run-build",
-    "build-only": "yarn rimraf dist && yarn run-build",
+    "run-build": "vite build --mode production",
+    "build": "echo Bundling modules... && yarn run-build && echo Compiling TS... && tsc -p tsconfig.build.json",
+    "build-only": "yarn run-build",
     "format": "prettier --write \"(src|examples)/**/*.{ts,tsx}\" \"**/*.md\"",
     "format:check": "prettier --list-different \"(src|examples)/**/*.{ts,tsx}\" \"docs/*/**.md\"",
     "lint": "eslint src examples",
     "test": "vitest",
-    "type-tests": "yarn tsc -p src/tests/tsconfig.typetests.json && yarn tsc -p src/query/tests/tsconfig.typetests.json",
+    "api": "yarn api:rtk && yarn api:rtk:react && yarn api:rtk:query && yarn api:rtk:query:react",
+    "api:rtk": "api-extractor run -c api-extractor.jsonc",
+    "api:rtk:react": "api-extractor run --verbose -c api-extractor-react.jsonc",
+    "api:rtk:query": "api-extractor run --verbose -c api-extractor-query.jsonc",
+    "api:rtk:query:react": "api-extractor run --verbose -c api-extractor-query-react.jsonc",
+    "type-tests": "tsc -p src/tests/tsconfig.typetests.json && tsc -p src/query/tests/tsconfig.typetests.json",
     "prepack": "yarn build"
   },
   "files": [
     "dist/",
-    "src/",
     "query",
-    "react"
+    "react",
+    "nanoid"
   ],
   "dependencies": {
     "immer": "^10.0.2",

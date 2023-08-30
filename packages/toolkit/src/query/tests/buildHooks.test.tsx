@@ -32,11 +32,11 @@ import {
   waitMs,
 } from './helpers'
 import { server } from './mocks/server'
-import type { UnknownAction } from 'redux'
+import type { UnknownAction } from '@reduxjs/toolkit/redux'
 import type { SubscriptionOptions } from '@reduxjs/toolkit/dist/query/core/apiState'
 import type { SerializedError } from '@reduxjs/toolkit'
 import { createListenerMiddleware, configureStore } from '@reduxjs/toolkit'
-import { delay } from '../../utils'
+import { delay } from '@reduxjs/toolkit/internal'
 
 // Just setup a temporary in-memory counter for tests that `getIncrementedAmount`.
 // This can be used to test how many renders happen due to data changes or

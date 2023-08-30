@@ -1,4 +1,4 @@
-import type { Middleware } from 'redux'
+import type { Middleware } from '@reduxjs/toolkit/redux'
 import { createDynamicMiddleware } from '../index'
 import { configureStore } from '../../configureStore'
 import type { BaseActionCreator, PayloadAction } from '../../createAction'

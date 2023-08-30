@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import type { StoreEnhancer } from 'redux'
+import type { StoreEnhancer } from '@reduxjs/toolkit/redux'
 
 declare const expectType: <T>(t: T) => T
 

@@ -6,8 +6,8 @@ import type {
   StoreEnhancer,
   Store,
   UnknownAction,
-} from 'redux'
-import { applyMiddleware, createStore, compose, combineReducers } from 'redux'
+} from '@reduxjs/toolkit/redux'
+import { applyMiddleware, createStore, compose, combineReducers } from '@reduxjs/toolkit/redux'
 import type { DevToolsEnhancerOptions as DevToolsOptions } from './devtoolsExtension'
 import { composeWithDevTools } from './devtoolsExtension'
 
@@ -21,8 +21,9 @@ import type {
   ExtractDispatchExtensions,
   ExtractStoreExtensions,
   ExtractStateExtensions,
-} from './tsHelpers'
-import type { Tuple } from './utils'
+  Tuple,
+  Middlewares,
+} from '@reduxjs/toolkit/internal'
 import type { GetDefaultEnhancers } from './getDefaultEnhancers'
 import { buildGetDefaultEnhancers } from './getDefaultEnhancers'
 
@@ -83,8 +84,6 @@ export interface ConfigureStoreOptions<
    */
   enhancers?: (getDefaultEnhancers: GetDefaultEnhancers<M>) => E
 }
-
-export type Middlewares<S> = ReadonlyArray<Middleware<{}, S>>
 
 type Enhancers = ReadonlyArray<StoreEnhancer>
 

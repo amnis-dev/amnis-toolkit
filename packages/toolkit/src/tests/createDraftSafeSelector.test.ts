@@ -1,5 +1,5 @@
 import { createDraftSafeSelector, createSelector } from '@reduxjs/toolkit'
-import { produce } from 'immer'
+import { createNextState } from '@reduxjs/toolkit/immer'
 
 type State = { value: number }
 const selectSelf = (state: State) => state
@@ -24,7 +24,7 @@ test('handles drafts correctly', () => {
     (state) => state.value
   )
 
-  produce({ value: 1 }, (state) => {
+  createNextState({ value: 1 }, (state) => {
     expect(unsafeSelector(state)).toBe(1)
     expect(draftSafeSelector(state)).toBe(1)
 

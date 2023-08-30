@@ -2,8 +2,8 @@ import type {
   ActionFromMatcher,
   Matcher,
   UnionToIntersection,
-} from './tsHelpers'
-import { hasMatchFunction } from './tsHelpers'
+} from '@reduxjs/toolkit/internal'
+import { hasMatchFunction } from '@reduxjs/toolkit/internal'
 import type {
   AsyncThunk,
   AsyncThunkFulfilledActionCreator,

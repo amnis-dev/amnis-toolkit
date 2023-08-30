@@ -1,4 +1,4 @@
-import type { IsAny, IsUnknown } from '../../src/tsHelpers'
+import type { IsAny, IsUnknown } from '@reduxjs/toolkit/internal'
 
 export function expectType<T>(t: T): T {
   return t

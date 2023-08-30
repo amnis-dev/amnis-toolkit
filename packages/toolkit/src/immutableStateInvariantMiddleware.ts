@@ -1,5 +1,5 @@
-import type { Middleware } from 'redux'
-import { getTimeMeasureUtils } from './utils'
+import type { Middleware } from '@reduxjs/toolkit/redux'
+import { getTimeMeasureUtils } from '@reduxjs/toolkit/internal'
 
 type EntryProcessor = (key: string, value: any) => any
 

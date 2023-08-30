@@ -1,7 +1,7 @@
 import { vi } from 'vitest'
 import { createApi } from '@reduxjs/toolkit/query'
 import { setupApiStore, waitMs } from './helpers'
-import { delay } from '../../utils'
+import { delay } from '@reduxjs/toolkit/internal'
 
 const mockBaseQuery = vi
   .fn()
